@@ -26,30 +26,8 @@ public class Client {
             String resultMatrixName = "result";//args[2];
             //String action = args[3];
 
-            Matrix secondMatrix = new Matrix(new ArrayList<ArrayList<Double>>() {
-                {
-                    for (int i = 0; i < 5; i++) {
-                        int finalI = i;
-                        ArrayList<Double> list = new ArrayList<>();
-                        for (int j = 0; j < 5; j++) {
-                            list.add((double) 1);
-                        }
-                        this.add(list);
-                    }
-                }
-            });
-            Matrix firstMatrix = new Matrix(new ArrayList<ArrayList<Double>>() {
-                {
-                    for (int i = 0; i < 5; i++) {
-                        int finalI = i;
-                        ArrayList<Double> list = new ArrayList<>();
-                        for (int j = 0; j < 5; j++) {
-                            list.add((double) 2);
-                        }
-                        this.add(list);
-                    }
-                }
-            });
+            Matrix secondMatrix = new Matrix();
+            Matrix firstMatrix = new Matrix();
 
             try (
                     ObjectOutputStream MatrixWriter1 = new ObjectOutputStream(new FileOutputStream(firstMatrixName))) {

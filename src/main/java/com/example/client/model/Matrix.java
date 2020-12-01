@@ -5,15 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
 import java.util.ArrayList;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 public class Matrix {
     private ArrayList<ArrayList<Double>> matrix;
+
     public  Double getElement(int i,int j){
         return matrix.get(i).get(j);
     }
